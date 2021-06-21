@@ -1,0 +1,17 @@
+<div class="container">
+    <nav class="navbar  bg-secondary">
+        <a id="a1" class=" text-white navbar-brand m-2" routerLink="/group">ChatRoom</a>
+         <div class="navbar navbar-inverse">
+            <a  class="nav-link text-white " (click)="onLogout()" *ngIf="loggedIn">
+                 <i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out
+            </a>
+             <a routerLink="/login" class="nav-link text-white p-3" *ngIf="!loggedIn">
+                 <i class="fa fa-sign-in" aria-hidden="true"></i> Sign in
+             </a>
+             <a routerLink="/registre" class="nav-link text-white" *ngIf="!loggedIn">
+                 <i class="fa fa-registered" aria-hidden="true"></i> Regsitre
+             </a>
+         </div>
+    </nav>
+    
+</div>

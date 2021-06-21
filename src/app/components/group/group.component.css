@@ -1,0 +1,12 @@
+#div1 , #div2 {
+    overflow: scroll;
+    height: 350px;
+}
+
+#header {
+   font-size: 20px;
+}
+#div3 {
+     float: right;
+     color: red;
+}

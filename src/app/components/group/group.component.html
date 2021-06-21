@@ -1,0 +1,47 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 " >
+            <div class="card">
+                <div id="header" class="card-header text-center">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i> your messages
+                </div>
+                <div id="div2">
+                    <div class="card-body"  *ngFor="let message of messages">
+                        <h4 class="card-title ">
+                             <i class="fa fa-user-circle p-2" aria-hidden="true"></i>{{message.user}}
+                             <div id="div3">
+                                 <i (click)="DeleteMessage(message.id)" class="fa fa-trash pt-2" aria-hidden="true"></i>
+                             </div>
+                        </h4> 
+                        <p class="card-text">{{message.body}}</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+             <div class="row">
+                 <div class="col-md-10">
+                    <input type="text" [(ngModel)]="message.body" class="form-control" name="body" placeholder="write a message">
+                 </div>
+                 <div class="col-md-2">
+                     <button type="submit" (click)="AddMessage()" class="btn btn-secondary btn-block">
+                         <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                     </button>
+                 </div>
+             </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div id="header" class="card-header text-center">
+                    les messages des autres membres
+                </div>
+                <div id="div1">
+                    <div class="card-body" *ngFor="let messsage of messsages">
+                        <h4 class="card-title"> <i class="fa fa-user-circle p-2" aria-hidden="true"></i> {{messsage.user}}
+                        </h4>
+                        <p class="card-text">{{messsage.body}}</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
